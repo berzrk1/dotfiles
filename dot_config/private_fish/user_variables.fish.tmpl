@@ -74,6 +74,9 @@ set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 # Set bat theme
 set -xg BAT_THEME neofusion
 
+# Use KDE File Picker
+set -xg GTK_USE_PORTAL 1
+
 # ======= Plugins =======
 ## ======= Done =======
 set -U __done_min_cmd_duration 10000
