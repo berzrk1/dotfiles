@@ -1,0 +1,30 @@
+return {
+  "nvim-zh/colorful-winsep.nvim",
+  event = { "WinNew", "WinLeave" },
+  opts = {
+    animate = {
+      enabled = false,
+    },
+    excluded_ft = {
+      "packer",
+      "TelescopePrompt",
+      "CompetiTest",
+      "netrw",
+      "NvimTree",
+      "lazy",
+      "mason",
+      "oil",
+      "neo-tree",
+      "symbols-outline",
+      "vim-be-good",
+      "oil",
+      "outline",
+      "trouble",
+      "startuptime",
+      "packer",
+      "spectre",
+      "alpha",
+      "edgy",
+    },
+  },
+}

@@ -1,0 +1,23 @@
+{
+  "extras": [
+    "lazyvim.plugins.extras.util.startuptime",
+    "plugins.extras.editor.berzrk.docs.devdocs",
+    "plugins.extras.lang.berzrk.bash",
+    "plugins.extras.lang.berzrk.hypr",
+    "plugins.extras.lang.berzrk.python",
+    "plugins.extras.lsp.berzrk.otter",
+    "plugins.extras.ui.berzrk.colorful-winsep",
+    "plugins.extras.ui.berzrk.colorschemes.neofusion",
+    "plugins.extras.ui.berzrk.diagflow",
+    "plugins.extras.ui.berzrk.noice-extended",
+    "plugins.extras.util.berzrk.cloak",
+    "plugins.extras.util.berzrk.tmux",
+    "plugins.extras.util.berzrk.wakatime",
+    "plugins.extras.util.berzrk.yazi"
+  ],
+  "install_version": 8,
+  "news": {
+    "NEWS.md": "11866"
+  },
+  "version": 8
+}
