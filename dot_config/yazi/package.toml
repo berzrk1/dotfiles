@@ -1,32 +1,39 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "1ab21d4"
-hash = "3996fc74044bc44144b323686f887e1"
-
-[[plugin.deps]]
-use = "imsi32/yatline"
-rev = "88bd1c5"
-hash = "981acbe9b758b1af3a8154c932bb936d"
-
-[[plugin.deps]]
-use = "imsi32/yatline-githead"
-rev = "f8f969e"
-hash = "4d441b38138ce6492a4e10fa349fd65"
-
-[[plugin.deps]]
-use = "DreamMaoMao/fg"
-rev = "0c6ae0b"
-hash = "3b5b2a05d97dbc697a7c26e9211bace7"
+rev = "1962818"
+hash = "6fa6a05a81c98dd000fbca3cca6e9682"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "1ab21d4"
-hash = "63b6c222bf2103b3023389dde5e2ecfe"
+rev = "1962818"
+hash = "26db011a778f261d730d4f5f8bf24b3f"
 
 [[plugin.deps]]
-use = "KKV9/compress"
-rev = "9fc8fe0"
-hash = "2ad086899bf368fba211a33d8f68c39d"
+use = "ndtoan96/ouch"
+rev = "406ce6c"
+hash = "f5afc904d5106ee368c8aa2ded43bd74"
 
-[flavor]
-deps = []
+[[plugin.deps]]
+use = "imsi32/yatline"
+rev = "c5d4b48"
+hash = "e6e98d12b1648d1894c2b560d85eeaa7"
+
+[[plugin.deps]]
+use = "imsi32/yatline-githead"
+rev = "929e52c"
+hash = "8282baf02fcd6aac00ccad2276775358"
+
+[[plugin.deps]]
+use = "wekauwau/yatline-tokyo-night"
+rev = "b4a6310"
+hash = "215729a555fe5286f1eb35520963d08"
+
+[[flavor.deps]]
+use = "BennyOe/tokyo-night"
+rev = "8e6296f"
+hash = "d9da921c3bd37ba32ee27a8a7a40461f"
+
+[[flavor.deps]]
+use = "6ruby1/eldritch"
+rev = "7b5bf34"
+hash = "d73a2192b13f0267461d5424a7f10cd1"
