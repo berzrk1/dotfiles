@@ -1,0 +1,42 @@
+# General
+.DS_Store
+Thumbs.db
+__MACOSX/
+.AppleDouble
+.LSOverride
+
+# Sensitive files
+.env
+.pem
+.key
+
+# Python
+__pycache__/
+*.py[codz]
+*$py.class
+
+# C/C++
+*.slo
+*.lo
+*.o
+*.obj
+*.so
+*.dylib
+*.dll
+*.so.*
+*.exe
+*.out
+*.app
+
+# Temporary files
+*.tmp 
+*.log 
+*.bak 
+*.swp 
+
+# Web files
+node_modules/
+npm-debug.log*
+yarn-error.log*
+package-lock.json
+vendor/

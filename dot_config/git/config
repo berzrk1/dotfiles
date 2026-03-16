@@ -1,0 +1,19 @@
+[core]
+    pager = delta
+    editor = nvim
+    excludesfile = ~/.config/git/ignore
+
+[init]
+    defaultBranch = main
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    dark = true      # or light = true, or omit for auto-detection
+    side-by-side = true
+    line-numbers = true
+
+[merge]
+    conflictStyle = zdiff3

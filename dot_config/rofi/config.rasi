@@ -8,7 +8,6 @@
 
 configuration {
 	/*---------- General setting ----------*/
-	modi: "drun,run,filebrowser,window";
 	case-sensitive: false;
 	cycle: true;
 	filter: "";
@@ -82,7 +81,7 @@ configuration {
 	display-filebrowser: "Files";
 
 	/*---------- Misc setting ----------*/
-	terminal: "rofi-sensible-terminal";
+	terminal: "kitty";
 	font: "Mono 12";
 	sort: false;
 	threads: 0;
@@ -104,6 +103,10 @@ configuration {
     }
 
 	/*---------- Keybindings ----------*/
+	kb-element-next: "";
+	kb-element-prev: "";
+	kb-mode-next: "Tab";          
+	kb-mode-previous: "ISO_Left_Tab";
 /*
 	kb-primary-paste: "Control+V,Shift+Insert";
 	kb-secondary-paste: "Control+v,Insert";
