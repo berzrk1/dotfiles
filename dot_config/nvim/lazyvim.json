@@ -14,7 +14,7 @@
     "plugins.extras.lsp.berzrk.otter",
     "plugins.extras.ui.berzrk.colorful-winsep",
     "plugins.extras.ui.berzrk.colorizer",
-    "plugins.extras.ui.berzrk.colorschemes.eidolon",
+    "plugins.extras.ui.berzrk.colorschemes.neofusion",
     "plugins.extras.ui.berzrk.diagflow",
     "plugins.extras.ui.berzrk.guess-indent",
     "plugins.extras.ui.berzrk.log-highlight",
