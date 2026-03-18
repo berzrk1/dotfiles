@@ -1,14 +1,16 @@
 return {
-  { "diegoulloao/neofusion.nvim", priority = 1000, config = true, opts = {} },
   {
-
+    "diegoulloao/neofusion.nvim",
+    priority = 1000,
+    config = true,
+    opts = {
+      transparent_mode = true,
+    },
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "neofusion",
-
-      -- colorscheme = function()
-      --   require("tokyonight").load()
-      -- end,
     },
   },
 }
