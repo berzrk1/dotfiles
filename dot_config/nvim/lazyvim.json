@@ -1,6 +1,29 @@
 {
-  "extras": [],
-  "install_version": 8,
+  "extras": [
+    "lazyvim.plugins.extras.util.chezmoi",
+    "plugins.extras.lang.berzrk.bash",
+    "plugins.extras.lang.berzrk.c",
+    "plugins.extras.lang.berzrk.cpp",
+    "plugins.extras.lang.berzrk.docker",
+    "plugins.extras.lang.berzrk.fish",
+    "plugins.extras.lang.berzrk.json",
+    "plugins.extras.lang.berzrk.markdown",
+    "plugins.extras.lang.berzrk.python",
+    "plugins.extras.lang.berzrk.toml",
+    "plugins.extras.lang.berzrk.web.html-css",
+    "plugins.extras.lsp.berzrk.otter",
+    "plugins.extras.ui.berzrk.colorful-winsep",
+    "plugins.extras.ui.berzrk.colorizer",
+    "plugins.extras.ui.berzrk.colorschemes.eidolon",
+    "plugins.extras.ui.berzrk.diagflow",
+    "plugins.extras.ui.berzrk.guess-indent",
+    "plugins.extras.ui.berzrk.log-highlight",
+    "plugins.extras.ui.berzrk.noice-extended",
+    "plugins.extras.util.berzrk.cloak",
+    "plugins.extras.util.berzrk.tmux",
+    "plugins.extras.util.berzrk.wakatime",
+    "plugins.extras.util.berzrk.yazi"
+  ],
   "news": {
     "NEWS.md": "11866"
   },
