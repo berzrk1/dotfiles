@@ -1,6 +1,7 @@
 {
   "extras": [
     "lazyvim.plugins.extras.util.chezmoi",
+    "plugins.extras.editor.berzrk.snacks_picker",
     "plugins.extras.lang.berzrk.bash",
     "plugins.extras.lang.berzrk.c",
     "plugins.extras.lang.berzrk.cpp",
@@ -24,6 +25,7 @@
     "plugins.extras.util.berzrk.wakatime",
     "plugins.extras.util.berzrk.yazi"
   ],
+  "install_version": 8,
   "news": {
     "NEWS.md": "11866"
   },
