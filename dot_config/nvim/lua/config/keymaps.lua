@@ -11,3 +11,14 @@ end, { desc = "Quit Buffer" })
 map("n", "<leader>ba", function()
   Snacks.bufdelete.all()
 end, { desc = "Delete All Buffers" })
+
+-- Dashboard
+map("n", "<leader>fd", function()
+  if LazyVim.has("snacks.nvim") then
+    Snacks.dashboard()
+  elseif LazyVim.has("alpha-nvim") then
+    require("alpha").start(true)
+  elseif LazyVim.has("dashboard-nvim") then
+    vim.cmd("Dashboard")
+  end
+end, { desc = "Dashboard" })
