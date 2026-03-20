@@ -17,8 +17,8 @@ open = [
   { run = "open %s", desc = "Open", for = "macos" },
 ]
 folder = [
-  { run = "dolphin %d1", desc = "Reveal", for = "linux" },
-  { run = "open -R %s1", desc = "Reveal", for = "macos" },
+  { run = "dolphin %s", desc = "Open", for = "linux" },
+  { run = "open %s", desc = "Open", for = "macos" },
 ]
 reveal = [
   { run = "dolphin %d1", desc = "Reveal", for = "linux" },
@@ -30,9 +30,6 @@ download = [
   { run = "ya emit download --open %S", desc = "Download and open" },
   { run = "ya emit download %S", desc = "Download" },
 ]
-execute = [{
-  run = "kitty -e %s", desc = "Run"
-}]
 
 [open]
 rules = [
