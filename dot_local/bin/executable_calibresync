@@ -4,8 +4,8 @@
 
 import argparse
 import subprocess
-from sys import exit, argv
-
+from pathlib import Path
+from sys import argv, exit
 
 help_msg = """
 USAGE
@@ -39,7 +39,7 @@ def main():
     args = parser.parse_args()
 
     cmd = ["rclone", "sync", "--progress"]
-    local = "/home/berzrk/Documents/Library/"
+    local = str(Path(r"~/Documents/Library/").expanduser())
     server = "google:library/"
 
     if args.local:
