@@ -1,6 +1,7 @@
 {
   "extras": [
     "lazyvim.plugins.extras.util.chezmoi",
+    "plugins.extras.coding.berzrk.blink",
     "plugins.extras.editor.berzrk.snacks_picker",
     "plugins.extras.lang.berzrk.bash",
     "plugins.extras.lang.berzrk.c",
