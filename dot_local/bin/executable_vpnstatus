@@ -1,9 +1,0 @@
-#!/bin/bash
-
-output=$(nordvpn status | awk "{print \$2}" | grep -q "Connected" && echo true || echo false)
-
-if [[ "$output" == "true" ]]; then
-  echo true
-else
-  echo false
-fi

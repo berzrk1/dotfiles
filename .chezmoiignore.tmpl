@@ -1,35 +1,41 @@
 # Always ignore these files:
 .config/fish/fish_variables
-README.md
-LICENSE
 .config/nvim/lazy-lock.json
-# Unused configs
+.config/tmux/plugins
+LICENSE
+README.md
+
+############################
+# Currently unused configs #
+############################
 .config/ghostty
 .config/zathura
-## Mac
-.config/yabai
-## Linux
-.config/skhd
-.config/swaync
-.config/qimgv
-.config/neovide
-
-# NOT a MacOS machine, ignore these files:
-{{ if ne .chezmoi.os "darwin" }}
+## Mac-only
 .config/skhd
 .config/yabai
-{{ end }}
-
-# NOT a Linux machine, ignore these files:
-{{ if ne .chezmoi.os "linux" }}
-.config/MangoHud
-.config/btop
+## Linux-only
 .config/hypr
 .config/keyb
+.config/neovide
 .config/qimgv
 .config/rofi
 .config/swaync
 .config/uwsm
 .config/waybar
-.config/zathura
+.config/xdg-desktop-portal
+
+##############################
+# Specific OS configurations #
+#############################
+####################
+# MacOS only files #
+####################
+{{ if ne .chezmoi.os "darwin" }}
+{{ end }}
+####################
+# Linux only files #
+####################
+{{ if ne .chezmoi.os "linux" }}
+.config/MangoHud
+.config/btop
 {{ end }}
