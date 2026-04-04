@@ -21,8 +21,8 @@ folder = [
   { run = "open %s", desc = "Open", for = "macos" },
 ]
 reveal = [
-  { run = "dolphin %d1", desc = "Reveal", for = "linux" },
-  { run = "open -R %s1", desc = "Reveal", for = "macos" },
+  { run = "dolphin %d1", desc = "Reveal", for = "linux", orphan = true },
+  { run = "open -R %s1", desc = "Reveal", for = "macos", orphan = true },
   { run = "clear; exiftool %s1 | less", desc = "Show EXIF", for = "unix", block = true },
 ]
 extract = [{ run = 'ouch d -y "$@"', desc = "Extract here", for = "unix" }]
