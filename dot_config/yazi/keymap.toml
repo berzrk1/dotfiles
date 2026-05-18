@@ -1,8 +1,4 @@
-prepend_keymap = [
-  { on = [
-    "!",
-  ], run = 'shell "$SHELL" --block', desc = "Open shell here" },
-]
+#:schema https://yazi-rs.github.io/schemas/keymap.json 
 # ouch
 [[mgr.prepend_keymap]]
 on = ["C"]
