@@ -22,8 +22,8 @@
     "plugins.extras.ui.berzrk.log-highlight",
     "plugins.extras.ui.berzrk.noice-extended",
     "plugins.extras.util.berzrk.cloak",
+    "plugins.extras.util.berzrk.image",
     "plugins.extras.util.berzrk.tmux",
-    "plugins.extras.util.berzrk.wakatime",
     "plugins.extras.util.berzrk.yazi"
   ],
   "install_version": 8,
