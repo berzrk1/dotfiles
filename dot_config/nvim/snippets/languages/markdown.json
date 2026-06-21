@@ -1,0 +1,66 @@
+{
+  "caution (callout)": {
+    "body": [
+      "> [!caution] $1",
+      "> $2"
+    ],
+    "description": "",
+    "prefix": "caution (callout)"
+  },
+  "note (callout)": {
+    "body": [
+      "> [!note] $1",
+      "> $2"
+    ],
+    "description": "",
+    "prefix": "note (callout)"
+  },
+  "abstract (callout)": {
+    "body": [
+      "> [!abstract] $1",
+      "> $2"
+    ],
+    "description": "",
+    "prefix": "abstract (callout)"
+  },
+  "info (callout)": {
+    "body": [
+      "> [!info] $1",
+      "> $2"
+    ],
+    "description": "",
+    "prefix": "info (callout)"
+  },
+  "tip (callout)": {
+    "body": [
+      "> [!tip] $1",
+      "> $2"
+    ],
+    "description": "",
+    "prefix": "tip (callout)"
+  },
+  "warning (callout)": {
+    "body": [
+      "> [!warning] $1",
+      "> $2"
+    ],
+    "description": "",
+    "prefix": "warning (callout)"
+  },
+  "example (callout)": {
+    "body": [
+      "> [!example] $1",
+      "> $2"
+    ],
+    "description": "",
+    "prefix": "example (callout)"
+  },
+  "quote (callout)": {
+    "body": [
+      "> [!quote] $1",
+      "> $2"
+    ],
+    "description": "",
+    "prefix": "quote (callout)"
+  }
+}
