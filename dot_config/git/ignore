@@ -40,3 +40,5 @@ npm-debug.log*
 yarn-error.log*
 package-lock.json
 vendor/
+
+**/.claude/settings.local.json
