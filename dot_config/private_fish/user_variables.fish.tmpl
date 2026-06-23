@@ -1,7 +1,6 @@
-# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-# ┃                    Set Configuration                        ┃
-# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃                   Environment                   ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 # XDG Directories
 set -xg XDG_CONFIG_HOME $HOME/.config
 set -xg XDG_CACHE_HOME $HOME/.cache
@@ -10,39 +9,37 @@ set -xg XDG_STATE_HOME $HOME/.local/state
 set -xg XDG_BIN_HOME $HOME/.local/bin
 set -xg XDG_SCRIPT_HOME $HOME/.local/script
 
-# Respect XDG Specification
 set -xg GOPATH $XDG_DATA_HOME/go
-set -xg GOBIN $XDG_DATA_HOME/go/bin/
-set -xg GOMODCACHE $XDG_CACHE_HOME/go/mod
-set -xg RUSTUP_HOME $XDG_DATA_HOME/rustup
-set -xg CARGO_HOME $XDG_DATA_HOME/cargo
-set -xg ANDROID_USER_HOME $XDG_DATA_HOME/android
-set -xg NODE_REPL_HISTORY $XDG_DATA_HOME/node_repl_history
-set -xg DOCKER_CONFIG $XDG_CONFIG_HOME/docker
-set -xg SQLITE_HISTORY $XDG_DATA_HOME/sqlite_history
-set -xg RIPGREP_CONFIG_PATH $HOME/.config/rg/.ripgreprc
-set -xg STARSHIP_CONFIG $HOME/.config/starship/starship.toml
-set -xg ANSIBLE_HOME $XDG_CONFIG_HOME/ansible
-set -xg FFMPEG_DATADIR $XDG_CONFIG_HOME/ffmpeg
-set -xg MYSQL_HISTFILE $XDG_DATA_HOME/mysql_history
-set -xg PYENV_ROOT $XDG_DATA_HOME/pyenv
-set -xg WORKON_HOME $XDG_DATA_HOME/virtualenvs
-set -xg XINITRC $XDG_CONFIG_HOME/X11/xinitrcexport
-set -xg XSERVERRC $XDG_CONFIG_HOME/X11/xserverrc
-set -xg HISTFILE $XDG_STATE_HOME/bash/history
-set -xg ZSH $XDG_DATA_HOME/oh-my-zsh
+set -xg GOBIN $GOPATH/bin/
 set -xg WINEPREFIX $XDG_DATA_HOME/wine
-set -xg NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/npmrc
-set -xg GTK2_RC_FILES $XDG_CONFIG_HOME/gtk-2.0/gtkrc
-set -xg W3M_DIR $XDG_DATA_HOME/w3m
-set -xg DOTNET_CLI_HOME $XDG_DATA_HOME/dotnet
-set -xg PNPM_HOME $XDG_DATA_HOME/pnpm
 
-set -x DOCKER_HOST unix://$XDG_RUNTIME_DIR/docker.sock
+# Change configuration location
+set -xg RIPGREP_CONFIG_PATH $HOME/.config/rg/.ripgreprc
+set -xg STARSHIP_CONFIG $XDG_CONFIG_HOME/starship/starship.toml
 
-# Path
+set -xg EDITOR nvim
+set -xg VISUAL $EDITOR
+set -xg SUDO_EDITOR $EDITOR
+set -xg MANROFFOPT -c
+set -xg MANPAGER "sh -c 'col -bx | bat -l man -p'"
+set -xg BAT_THEME neofusion
+set -xg GTK_USE_PORTAL 1
+
+{{- if eq .chezmoi.os "linux" -}}
+# Linux-only
+set -xg DOCKER_HOST unix://$XDG_RUNTIME_DIR/docker.sock
+{{ end }}
+
+{{- if eq .chezmoi.os "darwin" -}}
+# MacOS-only
+fish_add_path /opt/homebrew/bin/
+set -xg SHELL /opt/homebrew/bin/fish
+{{ end }}
+
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃                    $PATH                        ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 fish_add_path $XDG_BIN_HOME
-fish_add_path $CARGO_HOME/bin
 fish_add_path $XDG_SCRIPT_HOME
 fish_add_path /usr/local/bin
 fish_add_path /usr/local/sbin
@@ -50,50 +47,32 @@ fish_add_path /usr/bin
 fish_add_path /usr/sbin
 fish_add_path /bin
 fish_add_path /sbin
-fish_add_path /usr/lib/rustup/bin
 fish_add_path /usr/lib/go/bin
-fish_add_path $XDG_DATA_HOME/npm/bin
 fish_add_path $XDG_DATA_HOME/nvim/mason/bin
-fish_add_path $XDG_DATA_HOME/go/bin
-{{- if eq .chezmoi.os "darwin" }}
-fish_add_path /opt/homebrew/bin/
-{{ end }}
+fish_add_path $GOBIN
 
-{{ if eq .chezmoi.os "darwin" }}
-set -xg SHELL /opt/homebrew/bin/fish
-{{ end }}
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃                    PLUGINS                      ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+# ━━━━━━━━━ Done ━━━━━━━━━
+set -xg __done_min_cmd_duration 10000
+set -xg __done_notification_urgency_level low
 
-# Editor
-set -xg EDITOR nvim
-set -xg VISUAL $EDITOR
-set -xg SUDO_EDITOR $EDITOR
-
-# Man pages
-set -x MANROFFOPT -c
-set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
-
-# Set bat theme
-set -xg BAT_THEME neofusion
-
-# Use KDE File Picker
-set -xg GTK_USE_PORTAL 1
-
-# ======= Plugins =======
-## ======= Done =======
-set -U __done_min_cmd_duration 10000
-set -U __done_notification_urgency_level low
-
-## ======= Fzf =======
+# ━━━━━━━━━ Fzf ━━━━━━━━━
 set -xg FZF_DEFAULT_COMMAND fd
-set -xg FZF_DEFAULT_OPTS "--height=90% --layout=reverse --info=inline --border rounded --margin=1 --padding=1 \
---color=bg+:#031B26,bg:#000000,spinner:#fd5e3a,hl:#e2d9c5 \
---color=fg:#08435E,header:#e2d9c5,info:#35b5ff,pointer:#fa7a61 \
---color=marker:#fd5e3a,fg+:#66def9,prompt:#35b5ff,hl+:#fd5e3a
---bind 'ctrl-u:preview-half-page-up'
---bind 'ctrl-d:preview-half-page-down'
---bind 'ctrl-y:execute-silent(printf {} | cut -f 2- | wl-copy --trim-newline)'"
-
-set -xg fzf_preview_dir_cmd eza --long --header --icons --all --color=always --group-directories-first --hyperlink
-set -xg fzf_fd_opts --hidden --color=always
-set -xg _ZO_FZF_OPTS $FZF_DEFAULT_OPTS '--preview "{$fzf_preview_dir_cmd} {2}"'
-set -xg fzf_preview_file_cmd bat -n
+set -xg FZF_DEFAULT_OPTS '
+  --color=fg:#e2d9c5,fg+:#d0d0d0,bg:#0A0B14,bg+:#031B26
+  --color=hl:#45CEE9,hl+:#E3385E,info:#d7005f,marker:#E3385E
+  --color=prompt:#d7005f,spinner:#af5fff,pointer:#af5fff,header:#e2d9c5
+  --color=border:#262626,preview-fg:#8606db,label:#aeaeae,query:#E3385E
+  --border="rounded" --border-label="" --preview-window="border-rounded" --prompt="> "
+  --marker=">" --pointer="◆" --separator="─" --scrollbar="│"
+  --layout="reverse" --info="right"
+  --bind "ctrl-u:preview-half-page-up"
+  --bind "ctrl-d:preview-half-page-down"'
+set fzf_preview_dir_cmd eza --long --header --icons --all --color=always --group-directories-first --hyperlink
+set fzf_directory_opts --bind "ctrl-o:execute($EDITOR {} &> /dev/tty)"
+set fzf_fd_opts --hidden --color=always
+set fzf_preview_file_cmd bat -n --color=always
+set fzf_diff_highlighter delta --paging=never
+set fzf_history_time_format %d-%m

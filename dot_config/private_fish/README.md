@@ -3,9 +3,5 @@
 ## Installing Plugins
 
 ```shell
-ls fish_plugins | fisher install
-```
-
-```
-
+cat fish_plugins | fisher install
 ```
