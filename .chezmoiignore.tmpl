@@ -14,16 +14,17 @@ README.md
 .config/skhd
 .config/yabai
 ## Linux-only
-.config/hypr
+.config/MangoHud
+.config/btop
 .config/keyb
 .config/neovide
 .config/qimgv
 .config/rofi
 .config/sioyek
 .config/swaync
-.config/uwsm
 .config/waybar
-.config/xdg-desktop-portal
+.config/zathura
+.config/*-flags.conf
 
 ##############################
 # Specific OS configurations #
@@ -37,6 +38,7 @@ README.md
 # Linux only files #
 ####################
 {{ if ne .chezmoi.os "linux" }}
-.config/MangoHud
-.config/btop
+.config/hypr
+.config/uwsm
+.config/xdg-desktop-portal
 {{ end }}

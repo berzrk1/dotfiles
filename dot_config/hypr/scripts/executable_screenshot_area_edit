@@ -1,4 +1,0 @@
-#!/usr/bin/bash
-# Select screen area and take a screenshot of it,
-# and opens an editor to edit the screenshot.
-grim -g "$(slurp)" - | swappy -f -

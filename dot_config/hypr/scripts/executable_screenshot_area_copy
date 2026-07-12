@@ -1,6 +1,0 @@
-#!/usr/bin/bash
-# Select screen area and take a screenshot of it,
-# and it will be copied to clipboard.
-
-grimblast --freeze copy area || exit
-notify-send "Screenshot copied to clipboard"
