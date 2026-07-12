@@ -31,7 +31,8 @@ local gamingWorkspace = "name:gaming"
 
 hl.window_rule({ match = { content = "game" }, workspace = gamingWorkspace })
 hl.window_rule({ match = { class = gamingApps }, workspace = gamingWorkspace })
-hl.window_rule({ match = { class = "^(steam)$", title = "^(Friends List)$" }, float = true })
+-- Open any steam window (e.g. friends list, chat window) in float, except for the main window
+hl.window_rule({ match = { class = "^(steam)$", title = "negative:^(Steam)" }, float = true })
 hl.window_rule({
 	match = {
 		class = "^(steam)$",
