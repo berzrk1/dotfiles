@@ -40,7 +40,7 @@ def main():
 
     cmd = ["rclone", "sync", "--progress"]
     local = str(Path(r"~/Documents/Library/").expanduser())
-    server = "google:library/"
+    server = "pixel:library/"
 
     if args.local:
         print("Updating Local Library")
