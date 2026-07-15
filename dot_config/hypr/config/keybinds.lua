@@ -8,10 +8,11 @@ local launchPrefix = "uwsm app -- " -- if you are not using UWSM, make this empt
 
 hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("hyprctl kill"))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
--- hl.bind(mainMod .. " + ALT + Space", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + SHIFT + V", hl.dsp.layout("togglesplit"))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = 1 }))
 hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen())
-hl.bind(mainMod .. " + V", hl.dsp.layout("togglesplit"))
+hl.bind(mainMod .. " + P", hl.dsp.window.pin({ action = "toggle" }))
 hl.bind(mainMod .. " + code:115", hl.dsp.exec_cmd(noctCall .. " lockScreen lock")) -- end key
 hl.bind(mainMod .. " + SHIFT + code:115", hl.dsp.exec_cmd(noctCall .. " sessionMenu toggle"))
 
@@ -45,12 +46,9 @@ hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(launchPrefix .. BROWSER))
 hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd(launchPrefix .. BROWSER_OFF))
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(launchPrefix .. EDITOR))
 hl.bind("CONTROL + SHIFT + Escape", hl.dsp.exec_cmd(launchPrefix .. TERMINAL .. " -e btop"))
-hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(noctCall .. "settings toggle"))
+hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(noctCall .. "controlCenter toggle"))
+hl.bind(mainMod .. " + SHIFT + O", hl.dsp.exec_cmd(noctCall .. "settings toggle"))
 
---hl.bind(mainMod .. " + C",          hl.dsp.exec_cmd(launchPrefix .. CALCULATOR))
---hl.bind(mainMod .. " + W",          hl.dsp.exec_cmd(launchPrefix .. BROWSER))
---l.bind(mainMod .. " + Z",          hl.dsp.exec_cmd(noctCall .. "settings toggle"))
---hl.bind(mainMod .. " + X",          hl.dsp.exec_cmd(noctCall .. "controlCenter toggle"))
 hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(noctCall .. "launcher toggle"))
 hl.bind(mainMod .. " + period", hl.dsp.exec_cmd(noctCall .. "launcher emoji"))
 
@@ -82,16 +80,17 @@ hl.bind(mainMod .. " + ALT + SHIFT + CTRL + code:49", hl.dsp.exec_cmd("hyprctl s
 -------------------
 
 -- Screen Capture
--- hl.bind(mainMod .. " + P", hl.dsp.exec_cmd(noctCall .. "plugin:screen-toolkit colorPicker"))
 hl.bind("Print", hl.dsp.exec_cmd(noctCall .. "plugin:screen-toolkit annotate"))
 hl.bind("SHIFT + Print", hl.dsp.exec_cmd(noctCall .. "plugin:screen-toolkit annotateWindow"))
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(noctCall .. "plugin:screen-toolkit toggle"))
+
+-- Tools
+hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd(noctCall .. "plugin:screen-toolkit toggle"))
 
 -- Theming and Wallpaper
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd(noctCall .. " wallpaper toggle"))
 
 -- Clipboard
-hl.bind(mainMod .. " + SHIFT + V", hl.dsp.exec_cmd(noctCall .. "launcher clipboard"))
+hl.bind(mainMod .. " + CTRL + V", hl.dsp.exec_cmd(noctCall .. "launcher clipboard"))
 
 --------------------
 ---- WORKSPACES ----

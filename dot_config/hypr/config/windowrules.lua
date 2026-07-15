@@ -2,7 +2,6 @@ local primaryMonitor = "DP-3"
 local secondMonitor = "DP-2"
 
 -- Verified
-
 for i = 1, 6 do
 	hl.workspace_rule({ workspace = i, monitor = primaryMonitor })
 end
@@ -23,16 +22,16 @@ hl.window_rule({
 
 hl.window_rule({ match = { class = "obsidian" }, opacity = "0.95 0.95" })
 
---------------
-
 -- Gaming
 local gamingApps = "^(steam_app.*|gamescope)$"
 local gamingWorkspace = "name:gaming"
 
+hl.workspace_rule({ workspace = gamingWorkspace, monitor = primaryMonitor })
+
 hl.window_rule({ match = { content = "game" }, workspace = gamingWorkspace })
 hl.window_rule({ match = { class = gamingApps }, workspace = gamingWorkspace })
 -- Open any steam window (e.g. friends list, chat window) in float, except for the main window
-hl.window_rule({ match = { class = "^(steam)$", title = "negative:^(Steam)" }, float = true })
+hl.window_rule({ match = { class = "^(steam)$", title = "negative:^(Steam)" }, float = true, center = true })
 hl.window_rule({
 	match = {
 		class = "^(steam)$",
