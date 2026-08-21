@@ -5,8 +5,9 @@ hl.config({
 		gaps_in = 3,
 		gaps_out = 8,
 		border_size = 2,
-		extend_border_grab_area = 10,
+		extend_border_grab_area = 0,
 		resize_on_border = false,
+		hover_icon_on_border = false,
 		col = {
 			active_border = {
 				colors = { COLOR1, CACHYDGREEN },

@@ -1,5 +1,5 @@
-local primaryMonitor = "DP-3"
-local secondMonitor = "DP-2"
+local primaryMonitor = "DP-2"
+local secondMonitor = "DP-1"
 
 -- Verified
 for i = 1, 6 do
@@ -21,6 +21,7 @@ hl.window_rule({
 })
 
 hl.window_rule({ match = { class = "obsidian" }, opacity = "0.95 0.95" })
+hl.window_rule({ match = { float = true }, center = true, persistent_size = true })
 
 -- Gaming
 local gamingApps = "^(steam_app.*|gamescope)$"
@@ -50,6 +51,7 @@ hl.window_rule({
 	size = "monitor_w monitor_h",
 	fullscreen_state = 2,
 	content = "game",
+	sync_fullscreen = true,
 })
 hl.window_rule({
 	match = {
