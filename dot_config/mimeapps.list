@@ -1,12 +1,19 @@
 [Default Applications]
+application/pdf=org.kde.okular.desktop
+application/zip=org.kde.ark.desktop
+image/avif=org.kde.gwenview.desktop
+image/bmp=org.kde.gwenview.desktop
+image/jpeg=org.kde.gwenview.desktop
+image/png=org.kde.gwenview.desktop
+inode/directory=org.kde.dolphin.desktop;yazi.desktop
 text/html=firefox.desktop;
+text/plain=nvim.desktop;
+video/mp4=org.kde.haruna.desktop
+x-scheme-handler/claude-cli=claude-code-url-handler.desktop
 x-scheme-handler/discord=vesktop.desktop
 x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;
-application/pdf=org.kde.okular.desktop
-image/png=org.kde.gwenview.desktop
-image/jpeg=org.kde.gwenview.desktop
-image/avif=org.kde.gwenview.desktop
-video/mp4=org.kde.haruna.desktop
-x-scheme-handler/claude-cli=claude-code-url-handler.desktop
-application/zip=org.kde.ark.desktop;YACReader.desktop
+
+[Added Associations]
+x-scheme-handler/tg=com.ayugram.desktop.desktop;
+x-scheme-handler/tonsite=com.ayugram.desktop.desktop;
