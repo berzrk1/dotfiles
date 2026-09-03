@@ -61,7 +61,8 @@
         "middleClickFollowMouse": false,
         "monitors": [
             "DP-3",
-            "DP-2"
+            "DP-2",
+            "DP-1"
         ],
         "mouseWheelAction": "none",
         "mouseWheelWrap": true,
@@ -102,6 +103,12 @@
                     "defaultSettings": {
                     },
                     "id": "plugin:berzrk-vpn"
+                },
+                {
+                    "defaultSettings": {
+                        "rtspUrl": ""
+                    },
+                    "id": "plugin:berzrk-cctv"
                 },
                 {
                     "characterCount": 2,
@@ -624,15 +631,15 @@
             },
             {
                 "enabled": true,
-                "id": "qt"
-            },
-            {
-                "enabled": true,
                 "id": "kcolorscheme"
             },
             {
                 "enabled": true,
                 "id": "btop"
+            },
+            {
+                "enabled": true,
+                "id": "qt"
             }
         ],
         "enableUserTheming": false
@@ -664,7 +671,7 @@
         "linkLightAndDarkWallpapers": true,
         "monitorDirectories": [
             {
-                "directory": "/home/berzrk/Pictures/Wallpapers",
+                "directory": "/home/berzrk/Pictures/Wallpapers/2",
                 "name": "HDMI-A-1",
                 "wallpaper": ""
             }
@@ -674,7 +681,7 @@
         "overviewTint": 0.6,
         "panelPosition": "follow_bar",
         "randomIntervalSec": 300,
-        "setWallpaperOnAllMonitors": true,
+        "setWallpaperOnAllMonitors": false,
         "showHiddenFiles": false,
         "skipStartupTransition": false,
         "solidColor": "#1a1a2e",
@@ -691,8 +698,8 @@
         ],
         "useOriginalImages": false,
         "useSolidColor": false,
-        "useWallhaven": true,
-        "viewMode": "single",
+        "useWallhaven": false,
+        "viewMode": "recursive",
         "wallhavenApiKey": "",
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",

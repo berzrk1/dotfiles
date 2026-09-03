@@ -74,7 +74,7 @@ hl.window_rule({
 	fullscreen_state = 0,
 })
 hl.window_rule({ match = { class = "^(vesktop|discord)$" }, 6 })
-hl.window_rule({ match = { class = "^(.*[Cc]alculator.*)$" }, float = true, size = "380 616" })
+hl.window_rule({ match = { class = "^(org.kde.kcalc)$" }, float = true, size = "380 616" })
 hl.window_rule({ match = { class = "^(org.kde.keditfiletype)$" }, float = true })
 hl.window_rule({ match = { class = "^(org.kde.ark)$" }, size = "(monitor_w*0.40) (monitor_h*0.40)" })
 hl.window_rule({
