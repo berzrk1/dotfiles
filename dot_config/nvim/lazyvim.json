@@ -20,7 +20,6 @@
     "plugins.extras.ui.berzrk.guess-indent",
     "plugins.extras.ui.berzrk.log-highlight",
     "plugins.extras.ui.berzrk.noice-extended",
-    "plugins.extras.util.berzrk.image",
     "plugins.extras.util.berzrk.tmux",
     "plugins.extras.util.berzrk.yazi"
   ],
