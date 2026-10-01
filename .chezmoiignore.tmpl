@@ -1,0 +1,17 @@
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃                 chezmoiignore                   ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+# ━━━━━━━━━ Ignored ━━━━━━━━━
+.config/*         # Ignore everything by default
+LICENSE
+README.md
+
+# ━━━━━━━━━ macOS allowlist ━━━━━━━━━
+{{- if eq .chezmoi.os "darwin" }}
+!.config/tmux
+{{- end }}
+
+# ━━━━━━━━━ Linux allowlist ━━━━━━━━━
+{{- if eq .chezmoi.os "linux" }}
+!.config/tmux
+{{- end }}
