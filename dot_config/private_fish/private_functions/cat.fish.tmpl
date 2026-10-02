@@ -1,0 +1,7 @@
+function cat --wraps bat --description 'use bat instead of cat'
+{{- if and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.id "kali") }}
+    batcat --paging=never $argv
+{{- else }}
+    bat --paging=never $argv
+{{- end }}
+end

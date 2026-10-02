@@ -1,0 +1,17 @@
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃              Environment Variables              ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+set -gx EDITOR nvim
+set -gx VISUAL neovide
+set -gx GTK_USE_PORTAL 1
+set -gx MANPAGER "sh -c 'awk '\''{ gsub(/\x1B\[[0-9;]*m/, \"\", \$0); gsub(/.\x08/, \"\", \$0); print }'\'' | bat -plman'"
+set -gx MANWIDTH 100
+
+{{- if eq .chezmoi.os "linux" }}
+{{- end }}
+
+# ━━━━━━━━━ PATH ━━━━━━━━━
+fish_add_path -g ~/.local/bin
+{{- if eq .chezmoi.os "darwin" }}
+fish_add_path -g /opt/homebrew/bin /opt/homebrew/sbin
+{{- end }}

@@ -9,10 +9,15 @@ README.md
 # ━━━━━━━━━ macOS allowlist ━━━━━━━━━
 {{- if eq .chezmoi.os "darwin" }}
 !.config/tmux
+!.config/fish
+!.config/bat
 {{- end }}
 
 # ━━━━━━━━━ Linux allowlist ━━━━━━━━━
 {{- if eq .chezmoi.os "linux" }}
 !.config/tmux
 !.config/kitty
+!.config/fish
+!.config/plasma-workspace
+!.config/bat
 {{- end }}
