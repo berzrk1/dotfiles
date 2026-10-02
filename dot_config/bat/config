@@ -1,4 +1,3 @@
---theme="neofusion"
 --style="numbers,changes,header"
 --italic-text=always
 --pager="less -RFi"    # -i: case-insensitive search
