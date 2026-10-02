@@ -21,3 +21,8 @@ README.md
 !.config/plasma-workspace
 !.config/bat
 {{- end }}
+
+# ━━━━━━━━━ Kali ━━━━━━━━━
+{{- if ne .chezmoi.hostname "kali" }}
+.local/bin/bat
+{{- end }}
