@@ -1,0 +1,29 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Plain user@host:path$ prompt for report screenshots (toggle: Alt+O)
+add_newline = false
+format = "$username[@](bold green)$hostname[:](bold)$directory${custom.sign} "
+
+[username]
+show_always = true
+format = "[$user]($style)"
+style_user = "bold green"
+style_root = "bold red"
+
+[hostname]
+ssh_only = false
+format = "[$hostname]($style)"
+style = "bold green"
+
+[directory]
+truncation_length = 100
+truncate_to_repo = false
+read_only = ""
+format = "[$path]($style)"
+style = "bold blue"
+
+[custom.sign] # $ or # for root
+when = true
+command = "[ \"$(id -u)\" -eq 0 ] && echo '#' || echo '$'"
+shell = ["sh"]
+format = "$output"

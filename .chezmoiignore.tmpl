@@ -11,6 +11,7 @@ README.md
 !.config/tmux
 !.config/fish
 !.config/bat
+!.config/starship
 {{- end }}
 
 # ━━━━━━━━━ Linux allowlist ━━━━━━━━━
@@ -20,9 +21,10 @@ README.md
 !.config/fish
 !.config/plasma-workspace
 !.config/bat
+!.config/starship
 {{- end }}
 
-# ━━━━━━━━━ Kali ━━━━━━━━━
+# ━━━━━━━━━ Kali Specific ━━━━━━━━━
 {{- if ne .chezmoi.hostname "kali" }}
 .local/bin/bat
 .local/bin/fd
