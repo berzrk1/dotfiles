@@ -1,0 +1,15 @@
+{
+  "extras": [
+    "plugins.extras.berzrk.dap",
+    "plugins.extras.berzrk.lang.clangd",
+    "plugins.extras.berzrk.snacks",
+    "plugins.extras.berzrk.util.chezmoi",
+    "plugins.extras.berzrk.util.tmux",
+    "plugins.extras.berzrk.util.yazi"
+  ],
+  "install_version": 8,
+  "news": {
+    "NEWS.md": "11866"
+  },
+  "version": 8
+}

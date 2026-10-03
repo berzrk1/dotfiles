@@ -1,0 +1,19 @@
+{
+  "name": "berzrk-snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "plaintext",
+        "path": "./languages/txt.json"
+      },
+      {
+        "language": "python",
+        "path": "./languages/python.json"
+      },
+      {
+        "language": "cmake",
+        "path": "./languages/cmake.json"
+      }
+    ]
+  }
+}

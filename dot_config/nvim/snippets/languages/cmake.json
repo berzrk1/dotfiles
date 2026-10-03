@@ -1,0 +1,14 @@
+{
+  "cmake basic": {
+    "prefix": "cmake",
+    "body": [
+      "cmake_minimum_required(VERSION ${1:3.16})",
+      "project(${2:myproject})",
+      "set(CMAKE_CXX_STANDARD ${3:17})",
+      "set(CMAKE_CXX_STANDARD_REQUIRED ${4:YES})",
+      "set(CMAKE_CXX_EXTENSIONS ${5:OFF})",
+      "",
+      "add_executable(${6:myproject} main.cpp)"
+    ]
+  }
+}
