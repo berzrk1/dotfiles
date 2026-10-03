@@ -24,6 +24,7 @@ set -g fish_greeting
 
 # ━━━━━━━━━ PATH ━━━━━━━━━
 fish_add_path -g ~/.local/bin
+fish_add_path -g ~/.bun/bin
 {{- if eq .chezmoi.os "darwin" }}
 fish_add_path -g /opt/homebrew/bin /opt/homebrew/sbin
 {{- end }}
