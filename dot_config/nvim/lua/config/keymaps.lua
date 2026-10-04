@@ -16,7 +16,7 @@ vim.keymap.del("n", "<leader>`")
 map("n", "<leader>a", "<cmd>e #<cr>", { desc = "Switch to Last Buffer" })
 
 -- Dashboard
-map("n", "<leader>h", function()
+map("n", "<leader>D", function()
   if LazyVim.has("snacks.nvim") then
     Snacks.dashboard()
   elseif LazyVim.has("alpha-nvim") then
