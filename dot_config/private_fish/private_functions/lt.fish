@@ -3,5 +3,5 @@ function lt --wraps eza --description 'List files as a tree'
         missing_package eza
         return
     end
-    eza --long --header --icons --tree --git --group-directories-first --hyperlink=auto $argv
+    eza --header --icons --tree --git --group-directories-first --hyperlink=auto $argv
 end
