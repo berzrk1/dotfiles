@@ -1,7 +1,9 @@
 -- My changes to the default snacks
 return {
   { import = "lazyvim.plugins.extras.editor.snacks_picker" },
-  -- Project picker roots; scratch picker keeps <c-n> for moving down (new scratch on <a-n>)
+  -- Project picker roots; scratch picker keeps <c-n> for moving down (new scratch on <a-n>);
+  -- colorscheme picker hides Neovim's built-in colorschemes ($VIMRUNTIME/colors)
+  -- and black-metal's light variants (disabled by default; they only warn)
   {
     "folke/snacks.nvim",
     opts = {
@@ -20,6 +22,13 @@ return {
                 },
               },
             },
+          },
+          colorschemes = {
+            transform = function(item)
+              local builtin = vim.startswith(item.file, vim.env.VIMRUNTIME)
+              local black_metal_light = item.file:find("black-metal-theme-neovim", 1, true) and item.text:find("-light", 1, true)
+              return not (builtin or black_metal_light)
+            end,
           },
         },
       },

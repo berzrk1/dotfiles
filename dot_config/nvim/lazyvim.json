@@ -9,6 +9,7 @@
     "plugins.extras.berzrk.lang.python",
     "plugins.extras.berzrk.lang.toml",
     "plugins.extras.berzrk.snacks",
+    "plugins.extras.berzrk.ui.colorscheme",
     "plugins.extras.berzrk.util.chezmoi",
     "plugins.extras.berzrk.util.tmux",
     "plugins.extras.berzrk.util.yazi"
