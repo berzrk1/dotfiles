@@ -2,7 +2,7 @@
 # ┃              Environment Variables              ┃
 # ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 set -gx EDITOR nvim
-set -gx VISUAL neovide
+set -gx VISUAL nvim
 set -gx GTK_USE_PORTAL 1
 set -gx MANPAGER "sh -c 'awk '\''{ gsub(/\x1B\[[0-9;]*m/, \"\", \$0); gsub(/.\x08/, \"\", \$0); print }'\'' | bat -plman'"
 set -gx MANWIDTH 100
@@ -20,6 +20,7 @@ set -gx FZF_DEFAULT_OPTS --layout=reverse --info=inline-right --cycle --highligh
 set -g fish_greeting
 
 {{- if eq .chezmoi.os "linux" }}
+set -gx DOCKER_HOST unix://$XDG_RUNTIME_DIR/docker.sock
 {{- end }}
 
 # ━━━━━━━━━ PATH ━━━━━━━━━
