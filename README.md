@@ -1,13 +1,21 @@
 # dotfiles
 
+## Installation
+
+```sh
+# arch
+sudo pacman -Syu chezmoi git-delta fzf ripgrep tmux fd eza bat starship fish fisher kitty neovim ttf-fantasque-nerd npm
+
+# kali
+sudo apt install chezmoi git-delta fzf ripgrep tmux fd-find eza bat starship fish kitty neovim fonts-fantasque-sans npm
+```
+
 ## Post-Installation
 
-### fish plugins (fisher)
+```sh
+# Install fish plugins
+fisher update
 
-Plugins are listed in `~/.config/fish/fish_plugins`. Install fisher, then let it install the list:
-
-| Machine | Command                                  |
-| ------- | ---------------------------------------- |
-| CachyOS | `sudo pacman -S fisher && fisher update` |
-| macOS   | `brew install fisher && fisher update`   |
-| Kali    | manual installation                      |
+# Install tmux plugins
+# prefix + shift + I
+```
